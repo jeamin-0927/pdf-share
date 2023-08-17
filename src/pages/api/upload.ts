@@ -4,11 +4,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 
 import { connectToDatabase } from "@/utils/db";
 
-type Data = {
-  name: string,
-	thumb: string,
-	url: string,
-}
+import { Data } from "./types";
 
 export const config = {
   api: {

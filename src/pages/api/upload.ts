@@ -42,9 +42,8 @@ const handler = async (
   });
   const name = data.split("\"headline\": \"")[1].split("\",")[0];
   const thumb = `${data.split("\"image\": [\n      \"")[1].split("\"\n    ]")[0]}/thumb`;
-  const url = `https://pdfhost.io${data.split("var DEFAULT_URL = '")[1].split("';")[0]}`;
 
-  const put = { name, thumb, url };
+  const put = { name, thumb, view };
 
   const client = await connectToDatabase();
   const dataCollection = client.db().collection("data");

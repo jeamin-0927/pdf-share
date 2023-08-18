@@ -1,5 +1,6 @@
 export type Data = {
   name: string,
 	thumb: string,
-	url: string,
+	// url: string,
+	view: string
 }

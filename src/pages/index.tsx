@@ -8,7 +8,7 @@ import serverUpload from "@/utils/upload";
 
 import { Data } from "./api/types";
 
-const Home = () =>{
+const Home = (): React.JSX.Element =>{
   const [loading, setLoading] = React.useState<boolean>(false); 
   const [data, setData] = React.useState<Data[]>([]);
   const fileRef = React.useRef<HTMLInputElement>(null);
@@ -31,8 +31,8 @@ const Home = () =>{
   const upload = async () => {
     setLoading(true);
     try{
-      const { name, thumb, url } = await serverUpload(fileRef);
-      console.log(name, thumb, url);
+      const { name, thumb, view } = await serverUpload(fileRef);
+      console.log(name, thumb, view);
       await get();
     }
     catch {
@@ -72,19 +72,19 @@ const Home = () =>{
         </div>
         <div className={styles.list}>
           {
-            data.map((item, i) => (
+            data.length ? data.map((item, i) => (
               <div key={i} className={styles.greed}>
                 <div 
                   className={styles.item}
                   onClick={() => {
-                    window.open(item.url);
-                  }} 
+                    window.open(`/pdf/${item.view}`);
+                  }}
                 >
                   <img className={styles.img} src={item.thumb} alt={item.name} />
                   <div className={styles.name}>{item.name}</div>
                 </div>
               </div>
-            ))
+            )) : <div>검색 결과 없음</div>
           }
         </div>
       </main>

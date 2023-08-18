@@ -36,12 +36,12 @@ body {
 }
 .main{
   width: 100%;
-  max-width: 700px;
+  /* max-width: 700px; */
   height: 100%;
   overflow-x: hidden;
   border-top: 0;
   border-bottom: 0;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
 }
 .main{
   display: flex;
@@ -73,7 +73,7 @@ input, textarea, button, select {
   --color-8: 90, 25, 155;
   --color-primary: 17, 0, 44;
   --color-white: 255, 255, 255;
-  /* @media (prefers-color-scheme: dark) { 
+  @media (prefers-color-scheme: dark) { 
     --color-0: 0, 0, 0;
     --color-8: 195, 135, 255;
     --color-primary: 230, 230, 230;
@@ -84,5 +84,5 @@ input, textarea, button, select {
     --color-8: 195, 135, 255;
     --color-primary: 230, 230, 230;
     --color-white: 30, 30, 30;
-  } */
+  }
 }

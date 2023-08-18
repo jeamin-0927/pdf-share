@@ -9,7 +9,7 @@ import { Data } from "./types";
 export const config = {
   api: {
     bodyParser: {
-      sizeLimit: "1000mb",
+      sizeLimit: "100000mb",
     },
   },
 };

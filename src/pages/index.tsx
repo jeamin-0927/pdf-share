@@ -14,10 +14,10 @@ const Home = (): React.JSX.Element =>{
   const fileRef = React.useRef<HTMLInputElement>(null);
 
   const get = async () => {
-    setLoading(true);
+    // setLoading(true);
     const { data } = await axios.get("/api/get");
     setData(data);
-    setLoading(false);
+    // setLoading(false);
   };
 
   const search = async (query: string = "") => {

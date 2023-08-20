@@ -22,10 +22,10 @@ const Home = (): React.JSX.Element =>{
 
   const search = async (query: string = "") => {
     if(!query) return get();
-    setLoading(true);
+    // setLoading(true);
     const { data } = await axios.get(`/api/search?q=${query}`);
     setData(data);
-    setLoading(false);
+    // setLoading(false);
   };
 
   const upload = async () => {
